@@ -1,12 +1,10 @@
 # Android_Note
 
-
-
-
-
 [Java_Note](https://github.com/louisgeek/Java_Note)
 
 [Kotlin_Note](https://github.com/louisgeek/Kotlin_Note)
+
+
 
 - 设计模式
 
@@ -14,7 +12,13 @@
 
 - Android Studio
 
-  跳过sdk检查更新：在Android Studio\bin\idea.properties中添加disable.android.first.run=true
+  跳过sdk检查更新
+
+  ```
+  在Android Studio\bin\idea.properties中添加disable.android.first.run=true
+  ```
+
+  
 
   最强 Android Studio 使用技巧和快捷键 http://www.open-open.com/lib/view/open1458715872710.html
 
@@ -28,76 +32,144 @@
 
   - 主线程 
 
-    ComponentActivity.java 中 post 主线程方法 `new Handler(Looper.getMainLooper()).post(new Runnable()(){});`
+    ComponentActivity.java 中 post 主线程方法 
+    
+    ```java
+    new Handler(Looper.getMainLooper()).post(new Runnable()(){
+        
+    });
+    ```
+    
+    
+
+
+
+- Fragment 
+
+  onActivityResult() inside Nested Fragment is now called on Support Library rev 23.2 and above https://inthecheesefactory.com/blog/onactivityresult-nested-fragment-support-library-v23.2/en
+
+
+
+UI
+
+- Button
+
+  能够让 Button 样式变小,适应 wrap_content
+
+  ```  
+  //覆盖默认的的最小高度 默认主题中有 android:minHeight 设定 
+  android:minHeight="0dp"
+  ```
+
+  
+
+- ListView
+
+  ArrayIndexOutOfBoundsException问题：http://blog.csdn.net/yak262/article/details/8825409
+
+- RecyclerView 
+
+  - RecyclerView 封装
+
+    封装那些事-RecyclerView封装实践 http://www.jianshu.com/p/a6f158d1a9c9
+
+    真实项目运用-RecyclerView封装 http://www.jianshu.com/p/2f2996ef2c75
+
+- 自定义view
+
+   
+
+- ~~百分比布局~~ 改用约束布局
+
+Android UI性能优化详解 http://mrpeak.cn/android/2016/01/11/android-performance-u
+
+
 
 - Res
 
 Android selector 选择器 从上往下匹配 匹配到就返回了
 
-- UI
-
-  - Button
-
-     能够让 Button 样式变小,适应 wrap_content
-
-    `//去掉默认的 默认主题中有 android:minHeight 设定 改成  
-    android:minHeight="0dp"`
-
-  - ListView
-
-    ArrayIndexOutOfBoundsException问题：http://blog.csdn.net/yak262/article/details/8825409
-
-  - RecyclerView 
-
-    - RecyclerView 封装
-
-      封装那些事-RecyclerView封装实践 http://www.jianshu.com/p/a6f158d1a9c9
-
-      真实项目运用-RecyclerView封装 http://www.jianshu.com/p/2f2996ef2c75
-
-  - 自定义view
-
-  - ~~百分比布局~~ 改用约束布局
-
-  Android UI性能优化详解 http://mrpeak.cn/android/2016/01/11/android-performance-ui
-
 - Material Design
 
-  material配色 https://www.materialpalette.com/
+material配色 https://www.materialpalette.com/
+
+material 组件
+MaterialShapeDrawable
+MaterialShapeUtils
+MaterialToolbar
+
+- 动画
+
+  https://github.com/lgvalle/Material-Animations
+
+  演示View的平移、缩放动画，activity进入和退出动画，界面间元素共享，并且开发者在README中，对动画原理进行了精讲，是学习动画很好的项目，项目代码量比较少，也很适合新手学习
+
+  
+
+  
+
+  
 
 - Demo
 
-  1、google 官方demo https://developer.android.com/samples/index.html
+1、google 官方demo https://developer.android.com/samples/index.html
 
-  1、google 架构组件demo https://github.com/android/architecture-components-samples
+1、google 架构组件demo https://github.com/android/architecture-components-samples
 
-  3、最值得学习的5个app项目http://www.jianshu.com/p/8180cc105f01
+ 
 
-  4、泡在网上的日子里的完整项目   http://www.jcodecraeer.com/plus/list.php?tid=31&codecategory=22000
+4、泡在网上的日子里的完整项目   http://www.jcodecraeer.com/plus/list.php?tid=31&codecategory=22000
 
-  http://mobdevgroup.com/platform/android/project
+http://mobdevgroup.com/platform/android/project
 
-  5、第三方热门开源库
-  6、Android系统源码
+5、第三方热门开源库
 
-  心得：http://weaponzhi.online/2017/07/05/%E5%8F%AF%E8%83%BD%E8%BF%99%E5%B0%B1%E6%98%AF%E7%94%9F%E6%B4%BB%E7%9A%84%E4%B8%8D%E5%AE%8C%E7%BE%8E/
-
-  http://weaponzhi.online/2017/06/03/%E6%90%AC%E5%AE%B6%E7%9A%84%E4%BA%8B%E5%84%BF%E5%92%8C%E8%80%81%E7%88%B8%E5%BC%80%E9%A1%BA%E9%A3%8E%E8%BD%A6%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%82/
-
-  http://weaponzhi.online/2017/05/25/%E6%9D%A5%E5%8D%97%E4%BA%AC%E4%B8%80%E5%B9%B4%EF%BC%8C%E6%88%91%E5%B0%B1%E8%A6%81%E6%90%AC%E5%AE%B6%E4%BA%86/
-
-  http://weaponzhi.online/2017/04/27/%E6%88%91%E4%B8%8D%E6%84%BF%E6%84%8F%E5%8E%BB%E8%BE%93/
-
-  http://weaponzhi.online/2017/04/02/%E6%89%BE%E5%B7%A5%E4%BD%9C%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%89%E5%A4%A9%EF%BC%8C%E6%88%91%E6%8B%BF%E5%88%B0%E4%BA%86Offer/
+6、Android系统源码
 
 
   如何看懂源代码--(分析源代码方法)
 
   http://www.cnblogs.com/ToDoToTry/archive/2009/06/21/1507760.html
 
+- arch项目
 
+  BaseArchitecture
+
+  台湾人写的 MVP     dragger.android  rxjava room 等   中等简洁
+
+  Ganker
+
+  大部分采用谷歌的思维和代码  搭配学习谷歌 sample demo
+
+  https://github.com/xinghongfei/LookLook
+
+  可以阅读知乎日报，网易头条，每日推送一张妹子图片和视频，是一个精美的阅读软件。遵循Google Meterial 设计风格，加入了一些5.0以上的新特性，阅读体验绝不逊色于官方的app。
+
+  https://github.com/googlesamples/android-UniversalMusicPlayer
+
+  这个开源项目展示了如何实现一个横跨各种Android平台的音乐播放器，包括手机，平板，汽车，手表，电视等。Google官方推出，跨平台开发必看项目
+
+  https://github.com/nickbutcher/plaid
+
+  由谷歌工程师开发，展示Google Material风格设计，项目代码量大，但是结构清晰，还是很好理解的。
+
+- ML Kit
+
+https://developers.google.cn/ml-kit
+
+https://github.com/googlesamples/mlkit/tree/master/android/vision-quickstart
 
 ------
+
+- 博客
+
+总李写代码 https://www.cnblogs.com/whoislcj
+
+谷哥的小弟 https://blog.csdn.net/lfdfhl
+
+却把清梅嗅 https://qingmei2.blog.csdn.net
+
+HiDhl https://juejin.cn/user/2594503168898744
 
 其他附加知识
 
